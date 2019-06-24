@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  minecraft:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: svc-minecraft-server
+
+    ports:
+      - "25565:25565"
+
+    volumes:
+     - /home/minecraft/world0:/root #use var here for multiple worlds
+
